@@ -23,11 +23,77 @@ namespace EasyPatcher
         {
             InitializeComponent();
             linkLabel_version.Text = "v" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
             var meta = JSON.ToObject<Dictionary<string, dynamic>>(File.ReadAllText(PATCH_DIR + "meta.json"));
-            Text += " - " + meta["name"];
-            textBox_path.Text = meta["default_path"];
-            pictureBox_main.ImageLocation = Path.GetFullPath(PATCH_DIR + meta["image"]);
-            textBox_log.Text = (meta["notice"] as string).Replace("\n", Environment.NewLine);
+            Text += " - " + GetMetaString(meta, "name");
+            pictureBox_main.ImageLocation = Path.GetFullPath(PATCH_DIR + GetMetaString(meta, "image"));
+            textBox_log.Text = GetMetaString(meta, "notice").Replace("\n", Environment.NewLine);
+            if (textBox_log.Text.Length > 0)
+            {
+                textBox_log.AppendText(Environment.NewLine);
+            }
+
+            var defaultPath = GetMetaString(meta, "default_path");
+            var steamAppId = GetMetaString(meta, "steam_app_id");
+            DetectAndFillGamePath(defaultPath, steamAppId);
+        }
+
+        private static string GetMetaString(Dictionary<string, dynamic> meta, string key)
+        {
+            if (!meta.ContainsKey(key) || meta[key] == null)
+            {
+                return string.Empty;
+            }
+
+            return Convert.ToString(meta[key]);
+        }
+
+        private void DetectAndFillGamePath(string defaultPath, string steamAppId)
+        {
+            var candidates = GamePathDetector.FindCandidates(defaultPath, steamAppId);
+            if (candidates.Count == 1)
+            {
+                textBox_path.Text = candidates[0];
+                Log("[路徑] 已自動偵測遊戲安裝位置：" + candidates[0]);
+                return;
+            }
+
+            if (candidates.Count > 1)
+            {
+                string preferred = null;
+                try
+                {
+                    if (GamePathDetector.IsValidGameDirectory(defaultPath))
+                    {
+                        var normalizedDefault = Path.GetFullPath(defaultPath);
+                        preferred = candidates.FirstOrDefault(p =>
+                            string.Equals(p, normalizedDefault, StringComparison.OrdinalIgnoreCase));
+                    }
+                }
+                catch
+                {
+                    preferred = null;
+                }
+
+                if (!string.IsNullOrWhiteSpace(preferred))
+                {
+                    textBox_path.Text = preferred;
+                    Log("[路徑] 偵測到多個遊戲位置，已採用補丁預設位置：" + preferred);
+                }
+                else
+                {
+                    textBox_path.Text = defaultPath;
+                    Log("[路徑] 偵測到多個可能的遊戲位置，為避免誤選，請手動選擇正確位置：");
+                    foreach (var candidate in candidates)
+                    {
+                        Log("[路徑]   " + candidate);
+                    }
+                }
+                return;
+            }
+
+            textBox_path.Text = defaultPath;
+            Log("[路徑] 未自動偵測到遊戲位置，請確認路徑或按「瀏覽...」手動選擇。");
         }
 
         public void Log(string data)
@@ -38,20 +104,20 @@ namespace EasyPatcher
         public void Oops(string e)
         {
             Log(e);
-            MessageBox.Show(e, "致命错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(e, "致命錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public bool patchSCX(Dictionary<string, MPKEntry> mpk, string charset, Dictionary<string, dynamic> scx)
         {
-            Log("[SCX] 正在应用 SCX 补丁...");
+            Log("[SCX] 正在套用 SCX 補丁...");
             foreach (KeyValuePair<string, dynamic> kv in scx)
             {
                 if (!mpk.ContainsKey(kv.Key))
                 {
-                    Oops("[SCX] 无法找到文件 " + kv.Key);
+                    Oops("[SCX] 找不到檔案 " + kv.Key);
                     return false;
                 }
-                Log("[SCX] 正在对 " + kv.Key + " 应用补丁...");
+                Log("[SCX] 正在對 " + kv.Key + " 套用補丁...");
 
                 using (var ms = new MemoryStream())
                 using (var reader = new SCXReader(mpk[kv.Key].Data, charset))
@@ -61,7 +127,7 @@ namespace EasyPatcher
                     if (!SCX.ApplyPatch(kv.Value, reader, writer, sb))
                     {
                         Log(sb.ToString());
-                        Oops("[SCX] 补丁应用失败");
+                        Oops("[SCX] 補丁套用失敗");
                         return false;
                     }
                     mpk[kv.Key].SetData(ms.ToArray());
@@ -72,15 +138,15 @@ namespace EasyPatcher
 
         public bool patchFile(Dictionary<string, MPKEntry> mpk, Dictionary<string, dynamic> data)
         {
-            Log("[FILE] 正在应用文件补丁...");
+            Log("[FILE] 正在套用檔案補丁...");
             foreach (KeyValuePair<string, dynamic> kv in data)
             {
                 if (!mpk.ContainsKey(kv.Key))
                 {
-                    Log("[FILE] 无法找到文件 " + kv.Key);
+                    Log("[FILE] 找不到檔案 " + kv.Key);
                     continue;
                 }
-                Log("[FILE] 正在替换文件 " + kv.Key + " ...");
+                Log("[FILE] 正在取代檔案 " + kv.Key + " ...");
                 using (var ms = new MemoryStream(Convert.FromBase64String(kv.Value)))
                 using (var gzip = new GZipStream(ms, CompressionMode.Decompress))
                 using (var output = new MemoryStream())
@@ -122,10 +188,10 @@ namespace EasyPatcher
                 try
                 {
                     var usrdir = Path.Combine(textBox_path.Text, "USRDIR");
-                    Log("[BERD] 正在寻找 USRDIR...");
+                    Log("[BERD] 正在尋找 USRDIR...");
                     if (!Directory.Exists(usrdir))
                     {
-                        Oops("[BERD] USRDIR 不存在, 请检查你的目录设置.");
+                        Oops("[BERD] 找不到 USRDIR，請確認遊戲安裝路徑是否正確。");
                         Invoke(new Action(() => button_patch.Enabled = true));
                         return;
                     }
@@ -133,7 +199,7 @@ namespace EasyPatcher
                     var bakdir = usrdir + ".bak";
                     if (!Directory.Exists(bakdir))
                     {
-                        Log("[BERD] 备份文件夹不存在, 创建中...");
+                        Log("[BERD] 找不到備份資料夾，正在建立...");
                         Directory.CreateDirectory(bakdir);
                     }
 
@@ -146,12 +212,12 @@ namespace EasyPatcher
                         string file = patch["file"];
                         if (!File.Exists(Path.Combine(bakdir, file)))
                         {
-                            Log("[BERD] 正在备份 " + file + "...");
+                            Log("[BERD] 正在備份 " + file + "...");
                             File.Copy(Path.Combine(usrdir, file), Path.Combine(bakdir, file));
                         }
 
                         MPK mpk = null;
-                        Log("[MPK] 正在加载 " + file + "...");
+                        Log("[MPK] 正在載入 " + file + "...");
                         using (var reader = new BinaryReader(File.OpenRead(Path.Combine(bakdir, file))))
                         {
                             mpk = MPK.ReadFile(reader);
@@ -173,26 +239,26 @@ namespace EasyPatcher
                             }
                             break;
                         default:
-                            Oops("未知补丁类型");
+                            Oops("未知的補丁類型");
                             Invoke(new Action(() => button_patch.Enabled = true));
                             return;
                         }
 
-                        Log("[MPK] 正在打包 " + file + "...");
+                        Log("[MPK] 正在重新封裝 " + file + "...");
                         using (var writer = new BinaryWriter(File.Open(Path.Combine(usrdir, file), FileMode.Create)))
                         {
                             mpk.Write(writer);
-                            Log("[MPK] 打包成功: " + writer.BaseStream.Position);
+                            Log("[MPK] 封裝完成：" + writer.BaseStream.Position);
                         }
                     }
 
-                    MessageBox.Show("补丁应用完成, 请检查游戏是否能正常运行", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Log("[FENGberd] 操作完成, 请检查游戏是否能正常运行");
+                    MessageBox.Show("補丁套用完成，請確認遊戲是否能正常執行。", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Log("[EasyPatcher] 作業完成，請確認遊戲是否能正常執行。");
                 }
                 catch (Exception ex)
                 {
                     Oops(ex.ToString());
-                    Log("[FENGberd] 发生致命错误");
+                    Log("[EasyPatcher] 發生致命錯誤");
                 }
                 Invoke(new Action(() => button_patch.Enabled = true));
             });
@@ -205,21 +271,21 @@ namespace EasyPatcher
                 var usrdir = Path.Combine(textBox_path.Text, "USRDIR");
                 if (!Directory.Exists(usrdir))
                 {
-                    Oops("USRDIR 不存在, 请检查你的目录设置.");
+                    Oops("找不到 USRDIR，請確認遊戲安裝路徑是否正確。");
                     return;
                 }
                 var bakdir = usrdir + ".bak";
                 if (!Directory.Exists(bakdir))
                 {
-                    Oops("未找到备份文件夹.");
+                    Oops("找不到備份資料夾。");
                     return;
                 }
-                if (MessageBox.Show("确认要删除备份文件夹吗?\n删除后要撤销补丁必须重新验证游戏完整性\n并且可能对未来的补丁覆盖造成影响", "操作确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
+                if (MessageBox.Show("確定要刪除備份資料夾嗎？\n刪除後若要還原補丁，必須重新驗證遊戲檔案完整性，\n而且可能影響後續補丁版本的覆蓋。", "操作確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 {
                     return;
                 }
                 Directory.Delete(bakdir, true);
-                MessageBox.Show("备份文件夹已删除", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("備份資料夾已刪除。", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -231,7 +297,7 @@ namespace EasyPatcher
         {
             var save = new SaveFileDialog
             {
-                Filter = "日志文件(*.log)|*.log",
+                Filter = "日誌檔案 (*.log)|*.log",
                 DefaultExt = "log",
                 CheckPathExists = true
             };
@@ -254,7 +320,7 @@ namespace EasyPatcher
 
         private void linkLabel_version_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/fengberd/MagesTools");
+            System.Diagnostics.Process.Start("https://github.com/hwakeyeTW/MagesTools");
         }
     }
 }
