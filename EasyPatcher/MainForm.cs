@@ -98,7 +98,15 @@ namespace EasyPatcher
 
         public void Log(string data)
         {
-            Invoke(new Action(() => textBox_log.AppendText(DateTime.Now.ToString() + " " + data + Environment.NewLine)));
+            Action append = () => textBox_log.AppendText(DateTime.Now.ToString() + " " + data + Environment.NewLine);
+            if (InvokeRequired)
+            {
+                Invoke(append);
+            }
+            else
+            {
+                append();
+            }
         }
 
         public void Oops(string e)
