@@ -43,7 +43,7 @@
             this.button_patch.Name = "button_patch";
             this.button_patch.Size = new System.Drawing.Size(85, 23);
             this.button_patch.TabIndex = 2;
-            this.button_patch.Text = "套用補丁";
+            this.button_patch.Text = "套用修補檔";
             this.button_patch.UseVisualStyleBackColor = true;
             this.button_patch.Click += new System.EventHandler(this.button_patch_Click);
             // 
@@ -151,7 +151,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "MAGES 自動補丁工具";
+            this.Text = "MAGES 自動修補工具";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_main)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
