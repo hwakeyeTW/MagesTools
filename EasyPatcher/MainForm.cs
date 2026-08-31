@@ -54,7 +54,7 @@ namespace EasyPatcher
             if (candidates.Count == 1)
             {
                 textBox_path.Text = candidates[0];
-                Log("[路徑] 已自動偵測遊戲安裝位置：" + candidates[0]);
+                Log("[路徑] 已自動偵測到遊戲安裝位置：" + candidates[0]);
                 return;
             }
 
@@ -78,12 +78,12 @@ namespace EasyPatcher
                 if (!string.IsNullOrWhiteSpace(preferred))
                 {
                     textBox_path.Text = preferred;
-                    Log("[路徑] 偵測到多個遊戲位置，已採用修補檔預設位置：" + preferred);
+                    Log("[路徑] 偵測到多個遊戲位置，已使用修補檔的預設位置：" + preferred);
                 }
                 else
                 {
                     textBox_path.Text = defaultPath;
-                    Log("[路徑] 偵測到多個可能的遊戲位置，為避免誤選，請手動選擇正確位置：");
+                    Log("[路徑] 偵測到多個可能的遊戲位置，為避免選錯，請手動選擇正確位置：");
                     foreach (var candidate in candidates)
                     {
                         Log("[路徑]   " + candidate);
@@ -93,7 +93,7 @@ namespace EasyPatcher
             }
 
             textBox_path.Text = defaultPath;
-            Log("[路徑] 未自動偵測到遊戲位置，請確認路徑或按「瀏覽...」手動選擇。");
+            Log("[路徑] 未自動偵測到遊戲位置，請確認路徑，或按「瀏覽...」手動選擇。");
         }
 
         public void Log(string data)
@@ -117,7 +117,7 @@ namespace EasyPatcher
 
         public bool patchSCX(Dictionary<string, MPKEntry> mpk, string charset, Dictionary<string, dynamic> scx)
         {
-            Log("[SCX] 正在套用 SCX 修補資料...");
+            Log("[SCX] 正在套用 SCX 修補內容...");
             foreach (KeyValuePair<string, dynamic> kv in scx)
             {
                 if (!mpk.ContainsKey(kv.Key))
@@ -125,7 +125,7 @@ namespace EasyPatcher
                     Oops("[SCX] 找不到檔案 " + kv.Key);
                     return false;
                 }
-                Log("[SCX] 正在對 " + kv.Key + " 套用修補資料...");
+                Log("[SCX] 正在對 " + kv.Key + " 套用修補內容...");
 
                 using (var ms = new MemoryStream())
                 using (var reader = new SCXReader(mpk[kv.Key].Data, charset))
@@ -135,7 +135,7 @@ namespace EasyPatcher
                     if (!SCX.ApplyPatch(kv.Value, reader, writer, sb))
                     {
                         Log(sb.ToString());
-                        Oops("[SCX] 修補資料套用失敗");
+                        Oops("[SCX] 修補內容套用失敗");
                         return false;
                     }
                     mpk[kv.Key].SetData(ms.ToArray());
@@ -146,7 +146,7 @@ namespace EasyPatcher
 
         public bool patchFile(Dictionary<string, MPKEntry> mpk, Dictionary<string, dynamic> data)
         {
-            Log("[FILE] 正在套用檔案修補資料...");
+            Log("[FILE] 正在套用檔案修補內容...");
             foreach (KeyValuePair<string, dynamic> kv in data)
             {
                 if (!mpk.ContainsKey(kv.Key))
@@ -154,7 +154,7 @@ namespace EasyPatcher
                     Log("[FILE] 找不到檔案 " + kv.Key);
                     continue;
                 }
-                Log("[FILE] 正在取代檔案 " + kv.Key + " ...");
+                Log("[FILE] 正在取代檔案 " + kv.Key + "...");
                 using (var ms = new MemoryStream(Convert.FromBase64String(kv.Value)))
                 using (var gzip = new GZipStream(ms, CompressionMode.Decompress))
                 using (var output = new MemoryStream())
@@ -261,7 +261,7 @@ namespace EasyPatcher
                     }
 
                     MessageBox.Show("修補檔套用完成，請確認遊戲是否能正常執行。", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Log("[EasyPatcher] 作業完成，請確認遊戲是否能正常執行。");
+                    Log("[EasyPatcher] 處理完成，請確認遊戲是否能正常執行。");
                 }
                 catch (Exception ex)
                 {
@@ -305,7 +305,7 @@ namespace EasyPatcher
         {
             var save = new SaveFileDialog
             {
-                Filter = "日誌檔案 (*.log)|*.log",
+                Filter = "記錄檔 (*.log)|*.log",
                 DefaultExt = "log",
                 CheckPathExists = true
             };
