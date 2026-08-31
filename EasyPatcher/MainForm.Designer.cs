@@ -75,7 +75,7 @@
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(82, 23);
             this.button_save.TabIndex = 4;
-            this.button_save.Text = "儲存日誌";
+            this.button_save.Text = "儲存記錄";
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
