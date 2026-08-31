@@ -4,7 +4,7 @@
         {
             "label": "建置 EasyPatcher (Release)",
             "type": "shell",
-            "command": "$msbuild = & \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\Installer\\vswhere.exe\" -latest -products * -requires Microsoft.Component.MSBuild -find \"MSBuild\\**\\Bin\\MSBuild.exe\" | Select-Object -First 1; & $msbuild \"${workspaceFolder}\\EasyPatcher\\EasyPatcher.csproj\" /m /t:Build /p:Configuration=Release /p:Platform=AnyCPU",
+            "command": "$vswhere = Join-Path ([Environment]::GetFolderPath('ProgramFilesX86')) 'Microsoft Visual Studio\\Installer\\vswhere.exe'; $msbuild = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -find 'MSBuild\\**\\Bin\\MSBuild.exe' | Select-Object -First 1; & $msbuild '${workspaceFolder}\\EasyPatcher\\EasyPatcher.csproj' /m /t:Build /p:Configuration=Release /p:Platform=AnyCPU",
             "options": {
                 "shell": {
                     "executable": "powershell.exe",
@@ -28,7 +28,7 @@
         {
             "label": "重新編譯 EasyPatcher (Release)",
             "type": "shell",
-            "command": "$msbuild = & \"${env:ProgramFiles(x86)}\\Microsoft Visual Studio\\Installer\\vswhere.exe\" -latest -products * -requires Microsoft.Component.MSBuild -find \"MSBuild\\**\\Bin\\MSBuild.exe\" | Select-Object -First 1; & $msbuild \"${workspaceFolder}\\EasyPatcher\\EasyPatcher.csproj\" /m /t:Rebuild /p:Configuration=Release /p:Platform=AnyCPU",
+            "command": "$vswhere = Join-Path ([Environment]::GetFolderPath('ProgramFilesX86')) 'Microsoft Visual Studio\\Installer\\vswhere.exe'; $msbuild = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -find 'MSBuild\\**\\Bin\\MSBuild.exe' | Select-Object -First 1; & $msbuild '${workspaceFolder}\\EasyPatcher\\EasyPatcher.csproj' /m /t:Rebuild /p:Configuration=Release /p:Platform=AnyCPU",
             "options": {
                 "shell": {
                     "executable": "powershell.exe",
