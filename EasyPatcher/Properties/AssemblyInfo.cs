@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Easy Patcher")]
-[assembly: AssemblyDescription("MAGES 自動補丁工具")]
+[assembly: AssemblyDescription("MAGES 自動修補工具")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FENGberd / hwakeyeTW")]
 [assembly: AssemblyProduct("EasyPatcher")]
