@@ -78,7 +78,7 @@ namespace EasyPatcher
                 if (!string.IsNullOrWhiteSpace(preferred))
                 {
                     textBox_path.Text = preferred;
-                    Log("[路徑] 偵測到多個遊戲位置，已採用補丁預設位置：" + preferred);
+                    Log("[路徑] 偵測到多個遊戲位置，已採用修補檔預設位置：" + preferred);
                 }
                 else
                 {
@@ -117,7 +117,7 @@ namespace EasyPatcher
 
         public bool patchSCX(Dictionary<string, MPKEntry> mpk, string charset, Dictionary<string, dynamic> scx)
         {
-            Log("[SCX] 正在套用 SCX 補丁...");
+            Log("[SCX] 正在套用 SCX 修補資料...");
             foreach (KeyValuePair<string, dynamic> kv in scx)
             {
                 if (!mpk.ContainsKey(kv.Key))
@@ -125,7 +125,7 @@ namespace EasyPatcher
                     Oops("[SCX] 找不到檔案 " + kv.Key);
                     return false;
                 }
-                Log("[SCX] 正在對 " + kv.Key + " 套用補丁...");
+                Log("[SCX] 正在對 " + kv.Key + " 套用修補資料...");
 
                 using (var ms = new MemoryStream())
                 using (var reader = new SCXReader(mpk[kv.Key].Data, charset))
@@ -135,7 +135,7 @@ namespace EasyPatcher
                     if (!SCX.ApplyPatch(kv.Value, reader, writer, sb))
                     {
                         Log(sb.ToString());
-                        Oops("[SCX] 補丁套用失敗");
+                        Oops("[SCX] 修補資料套用失敗");
                         return false;
                     }
                     mpk[kv.Key].SetData(ms.ToArray());
@@ -146,7 +146,7 @@ namespace EasyPatcher
 
         public bool patchFile(Dictionary<string, MPKEntry> mpk, Dictionary<string, dynamic> data)
         {
-            Log("[FILE] 正在套用檔案補丁...");
+            Log("[FILE] 正在套用檔案修補資料...");
             foreach (KeyValuePair<string, dynamic> kv in data)
             {
                 if (!mpk.ContainsKey(kv.Key))
@@ -247,7 +247,7 @@ namespace EasyPatcher
                             }
                             break;
                         default:
-                            Oops("未知的補丁類型");
+                            Oops("未知的修補類型");
                             Invoke(new Action(() => button_patch.Enabled = true));
                             return;
                         }
@@ -260,7 +260,7 @@ namespace EasyPatcher
                         }
                     }
 
-                    MessageBox.Show("補丁套用完成，請確認遊戲是否能正常執行。", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("修補檔套用完成，請確認遊戲是否能正常執行。", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Log("[EasyPatcher] 作業完成，請確認遊戲是否能正常執行。");
                 }
                 catch (Exception ex)
@@ -288,7 +288,7 @@ namespace EasyPatcher
                     Oops("找不到備份資料夾。");
                     return;
                 }
-                if (MessageBox.Show("確定要刪除備份資料夾嗎？\n刪除後若要還原補丁，必須重新驗證遊戲檔案完整性，\n而且可能影響後續補丁版本的覆蓋。", "操作確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
+                if (MessageBox.Show("確定要刪除備份資料夾嗎？\n刪除後若要還原修補內容，必須重新驗證遊戲檔案完整性，\n而且可能影響後續修補版本的套用。", "操作確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 {
                     return;
                 }
