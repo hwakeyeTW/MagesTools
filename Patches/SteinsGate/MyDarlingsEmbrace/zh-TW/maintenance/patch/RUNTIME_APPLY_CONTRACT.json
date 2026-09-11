@@ -1,0 +1,22 @@
+{
+  "schema": "BR-V5-POSTFIX-RUNTIME-APPLY-CONTRACT-1.0",
+  "clean_en_script_mpk": {
+    "sha256": "650b5fd31afbb00a84555ded7d2a2052faf3549b1e31a13561f7176e2013b281",
+    "bytes": 3803156
+  },
+  "publication_script_json": {
+    "sha256": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
+    "bytes": 2028270
+  },
+  "expected_runtime_script_mpk": {
+    "sha256": "d12dfb0b833058dfe952af65ab9c7d8c70ecb5f1d8d82e128da8b564d0b7c1dc",
+    "bytes": 4639574
+  },
+  "expected_runtime_system_mpk": {
+    "sha256": "83ec04c94f16f65d3f056a1297c580a4ddb6f6522311e9b74d51f490ef24e109",
+    "bytes": 169604760
+  },
+  "patcher": "Artifact A unchanged EasyPatcher/MagesLib/fastJSON",
+  "formal_runtime_lane": "Windows / .NET Framework 4.8 compatible host",
+  "gameplay_regression_evidence": "BR-V5-TIPS-ENBASE-CORR01-GAMEPLAY01_RESULT_PACKAGE_v1_0.zip"
+}

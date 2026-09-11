@@ -1,0 +1,21 @@
+{
+  "schema": "BR-V5-POSTFIX-DIRECT-PLAINTEXT-SCRIPT-AUTHORITY-REPOSITORY-1.0",
+  "classification": "ACCEPTED_DIRECT_FROZEN_PLAINTEXT_PUBLICATION_SOURCE",
+  "repository": "hwakeyeTW/MagesTools",
+  "source_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/patch/berd/script.json",
+  "sha256": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
+  "bytes": 2028270,
+  "type": "scx",
+  "file": "script.mpk",
+  "scx_keys": 78,
+  "transforms": 21512,
+  "nulls": 72,
+  "_TIPS.SCX": 924,
+  "_SYSTEM.SCX": 209,
+  "architecture": "EN_BASELINE_NO_JP_ONLY_STRUCTURAL_IMPORT",
+  "reproduction_policy": "ALLOWED_GENERATION_INPUT",
+  "source_provenance": {
+    "B_path": "project_sources/script_build/canonical_maintenance/DIRECT_PLAINTEXT_AUTHORITY.json",
+    "adaptation": "REPOSITORY_NATIVE_PATH_REBIND"
+  }
+}

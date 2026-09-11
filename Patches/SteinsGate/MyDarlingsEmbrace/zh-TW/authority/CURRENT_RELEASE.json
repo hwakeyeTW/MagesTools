@@ -1,0 +1,32 @@
+{
+  "schema": "BR-V5-REPOSITORY-CURRENT-RELEASE-1.0",
+  "milestone_id": "2026-09-10-final-playable",
+  "release_status": "FINAL_PLAYABLE_RELEASE_ACCEPTED",
+  "architecture": "EN_BASELINE_NO_JP_ONLY_STRUCTURAL_IMPORT",
+  "production_candidate": {
+    "filename": "SteinsGate_MDE_TC_Patch_BRV5_v1.2.0.0_POSTFIXCandidate_v1_0.zip",
+    "sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
+    "bytes": 10418010,
+    "repository_storage": "GITHUB_RELEASE_ASSET"
+  },
+  "patch_source": {
+    "berd/script.json": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
+    "berd/system.json": "164c905ae2eddfb5bc026feac3f1735ad39deb8106aa3d469f377bb058bb01b2",
+    "berd/meta.json": "1cabcacce4dde81a29b73a1363b92cdbad0d378fff1f866739a30545a75e1837",
+    "berd/MDE.bmp": "855457b70e4c450b448c8589f2a6f221e05ba5b50fb3d22930cc5a610b510e72"
+  },
+  "runtime": {
+    "script.mpk": "d12dfb0b833058dfe952af65ab9c7d8c70ecb5f1d8d82e128da8b564d0b7c1dc",
+    "system.mpk": "83ec04c94f16f65d3f056a1297c580a4ddb6f6522311e9b74d51f490ef24e109",
+    "Game.exe": "a7225cc3c19c02c690ea486d293388c3015ff106eacc64da7be157fdfa0bf891"
+  },
+  "reproduction": {
+    "result_sha256": "be99fe483f379015cb73db0f8a555046e693a63d754a6376628894ec1f058545",
+    "coverage": "96/96 PASS; NOT_RUN=0"
+  },
+  "final_gate": {
+    "result_sha256": "8b8647586c37e5bcfc42e5934d0774964f0244d7974167c11d10feb5dded05bc",
+    "verdict": "PASS / FINAL_PLAYABLE_RELEASE_ACCEPTED"
+  },
+  "meta_notice_note": "patch/berd/meta.json is byte-frozen and retains pre-Final-Gate candidate wording; this repository-native authority file states current release status."
+}

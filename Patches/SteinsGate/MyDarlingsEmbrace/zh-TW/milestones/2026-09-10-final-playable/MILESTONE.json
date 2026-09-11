@@ -1,0 +1,15 @@
+{
+  "schema": "BR-V5-GITHUB-MILESTONE-1.0",
+  "milestone_id": "2026-09-10-final-playable",
+  "status": "FINAL_PLAYABLE_RELEASE_ACCEPTED",
+  "production_candidate_sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
+  "script_sha256": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
+  "source_freeze": {
+    "A": "6bfa863ab45f77a97832ceb25c9dab916c29b5c4e5a39c816570fa713af4658b",
+    "B_postfix": "1445e2bb41d25063102b53e041bec8b8210b4b6ad1729eb1d394b2a656b43c73",
+    "C_postfix": "7f9463b8b5133775080f44044ad68d692ffb398e62de375ea4c7fa25fb42389a"
+  },
+  "repro_result_sha256": "be99fe483f379015cb73db0f8a555046e693a63d754a6376628894ec1f058545",
+  "final_gate_result_sha256": "8b8647586c37e5bcfc42e5934d0774964f0244d7974167c11d10feb5dded05bc",
+  "repository_staging_status": "STAGE01_PREPUBLICATION"
+}

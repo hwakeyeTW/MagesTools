@@ -1,0 +1,44 @@
+{
+  "schema": "MAGES-PUBLIC-PRIVATE-SOURCE-AUTHORITY-LOCK-1.0",
+  "milestone_id": "2026-09-10-final-playable",
+  "private_repository": "hwakeyeTW/MagesTranslationSources",
+  "visibility": "private",
+  "sources": [
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/alignment/SGMDE_JP_EN_TC_ALIGNMENT.json",
+      "sha256": "c9c1d6bd07fe76d65edba88e073d78ad53a4dce1532c913275ed97880dacd748",
+      "classification": "PRIVATE_LOOSE"
+    },
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/authority/source/PADJ-SR08_SOURCE_AUTHORITY_REVISION.json",
+      "sha256": "e01884a30c16fe8bd8d3ffc305888c1ce63e6fc108fb244fcf4e64ae6d31d3d0",
+      "classification": "PRIVATE_LOOSE"
+    },
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/source/jp-en/SGMDE_BlindReview_JP_EN_Source_v10_PADJ_CORRECTED.json",
+      "sha256": "c234e9d5ad14c89750cfc452625c51b396727c6addc90bcfa175e51abf4b9d7b",
+      "classification": "PRIVATE_LOOSE"
+    },
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/source/jp/complete/SGMDE_JP_COMPLETE_SOURCE_PADJ_VERIFIED_v3.json",
+      "sha256": "4b98cd040b50f1a199203b8ffacf0a17dc0c45d497c6870412893073586ac224",
+      "classification": "PRIVATE_LOOSE"
+    },
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/glyph-recovery/SGMDE_JP_GLYPH_RECOVERY_PADJ_CORRECTED_v8_ACCEPTED_CANDIDATE.json",
+      "sha256": "ac71d97d4456a24834c7e9c1c889d9e479d470b4f06a53817a2b74e62d59f891",
+      "classification": "PRIVATE_LOOSE"
+    },
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/review/source-authority/frozen/PADJ-SR08_COORDINATOR_ACCEPTANCE_PACKAGE_v1_0.zip",
+      "sha256": "d4dddf0d6ea81c5b8aad39b9fe69220ed8f714f5cdcdda53ccbc3e9a58fc6a4f",
+      "classification": "PRIVATE_FROZEN"
+    },
+    {
+      "path": "SteinsGate/MyDarlingsEmbrace/zh-TW/review/source-authority/frozen/PADJ-SR08_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "e3ab52f7f8ed5c3cfa0de3b7df94df3e503b7ae27231328142a6b64577902a91",
+      "classification": "PRIVATE_FROZEN"
+    }
+  ],
+  "binding_key": "repository + path + sha256 + milestone_id"
+}

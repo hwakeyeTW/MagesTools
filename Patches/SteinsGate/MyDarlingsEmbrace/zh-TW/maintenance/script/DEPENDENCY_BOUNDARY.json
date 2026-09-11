@@ -1,0 +1,15 @@
+{
+  "schema": "BR-V5-POSTFIX-SCRIPT-DIRECT-SOURCE-BOUNDARY-REPOSITORY-1.0",
+  "repository": "hwakeyeTW/MagesTools",
+  "generation_source": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/patch/berd/script.json",
+  "prohibited": [
+    "historical pre-postfix structural materializer",
+    "JP-only TIPS structural import",
+    "366-trigger remap"
+  ],
+  "status": "FROZEN_CURRENT_MILESTONE",
+  "source_provenance": {
+    "B_path": "project_sources/script_build/canonical_maintenance/DEPENDENCY_BOUNDARY.json",
+    "adaptation": "REPOSITORY_NATIVE_PATH_REBIND"
+  }
+}

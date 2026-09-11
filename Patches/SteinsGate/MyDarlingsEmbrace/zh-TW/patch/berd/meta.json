@@ -1,0 +1,6 @@
+{
+  "name": "STEINS;GATE 比翼雙飛的戀人 繁體中文補丁 — BR-V5 PBRT 候選版",
+  "image": "MDE.bmp",
+  "notice": "此為 BR-V5 的 PBRT 遊戲內驗證候選，尚非最終發布版。\n已完成 Final Text Freeze、腳本與 GenYoGothic TC 字型資源建置。\n僅供 PBRT runtime QA 使用；通過 PLAYABLE-GATE04 前不得視為正式發布版。\n僅適用於英文版遊戲；套用前請使用乾淨遊戲檔案或保留由乾淨英文版建立的 USRDIR.bak。",
+  "default_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\SG_My Darling's Embrace"
+}

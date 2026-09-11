@@ -1,0 +1,21 @@
+{
+  "schema": "MAGES-PATCH-TOOLING-REFERENCE-1.0",
+  "repository": "hwakeyeTW/MagesTools",
+  "milestone_id": "2026-09-10-final-playable",
+  "vendored_in_game_tree": false,
+  "EasyPatcher": {
+    "assembly_version": "1.2.0.0",
+    "accepted_binary_sha256": "75404cfe8aac6d1d69f4d7f8fa1a9ec03e746699184c538350d0ad7652fb315d",
+    "accepted_config_sha256": "f82338e8e9c746b5d95cd2ccc7bf94dd5de2b9b8982fffddf2118e475de50e15",
+    "source_reference_branch": "fix/zh-tw-terminology",
+    "source_reference_commit": "d3a5d58a7b9e86cae4290e0fd6e56c15b741a001",
+    "source_binding": "RELEVANT_CONTROL_FLOW_CORRESPONDENT_EXACT_BUILD_COMMIT_NOT_PROVEN"
+  },
+  "MagesLib": {
+    "accepted_binary_sha256": "e82996f2888998c2a43f4025b98c3b9990f9285162adc47f1139e5ddcda129e1"
+  },
+  "fastJSON": {
+    "accepted_binary_sha256": "6ae4faf9c1e2eb4a9eead6843c56cba6d7ab77f0b6753aa8c3564d6562de143b"
+  },
+  "publication_prerequisite": "Resolve/merge/tag current EasyPatcher source lineage before final public publication if desired; Stage01 does not modify Git history."
+}
