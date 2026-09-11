@@ -1,0 +1,214 @@
+{
+  "schema": "BR-V5-PUBLIC-REPOSITORY-PATH-BINDING-1.0",
+  "milestone_id": "2026-09-10-final-playable",
+  "repository": "hwakeyeTW/MagesTools",
+  "mappings": [
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/font_build/canonical_maintenance/DEPENDENCY_BOUNDARY.json",
+      "source_sha256": "3cb1e7d993f0f15e1246536877567ec7f1088e33269fec4e5bcf0c825916fc03",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/font/DEPENDENCY_BOUNDARY.json",
+      "target_sha256": "3cb1e7d993f0f15e1246536877567ec7f1088e33269fec4e5bcf0c825916fc03",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/font_build/canonical_maintenance/README.md",
+      "source_sha256": "c109ad4f3228475c95fe3e2a60a58a9ba3d4edba21a9514d041811dbbe2fb49d",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/font/README.md",
+      "target_sha256": "c109ad4f3228475c95fe3e2a60a58a9ba3d4edba21a9514d041811dbbe2fb49d",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/font_build/canonical_maintenance/font_maintenance_build.py",
+      "source_sha256": "6ad2bc296c2e51bf296687fc981366be6fb07aa9f1315b723d016ab03adcd8c0",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/font/font_maintenance_build.py",
+      "target_sha256": "6ad2bc296c2e51bf296687fc981366be6fb07aa9f1315b723d016ab03adcd8c0",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/berd/meta.json",
+      "source_sha256": "1cabcacce4dde81a29b73a1363b92cdbad0d378fff1f866739a30545a75e1837",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/patch/berd/meta.json",
+      "target_sha256": "1cabcacce4dde81a29b73a1363b92cdbad0d378fff1f866739a30545a75e1837",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/berd/script.json",
+      "source_sha256": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/patch/berd/script.json",
+      "target_sha256": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/berd/system.json",
+      "source_sha256": "164c905ae2eddfb5bc026feac3f1735ad39deb8106aa3d469f377bb058bb01b2",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/patch/berd/system.json",
+      "target_sha256": "164c905ae2eddfb5bc026feac3f1735ad39deb8106aa3d469f377bb058bb01b2",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/canonical_maintenance/DEPENDENCY_BOUNDARY.json",
+      "source_sha256": "e1eeb8400e881b13816193ae03e4db99d550c17d91e771dd88f7ca7f99a93d6b",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/patch/DEPENDENCY_BOUNDARY.json",
+      "target_sha256": "78cc4800dfef18512e7a170ac1b9437ee5b51c5e6317cbdb1442c34a84f1a655",
+      "action": "GENERATED_REPOSITORY_NATIVE_SUCCESSOR"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/canonical_maintenance/README.md",
+      "source_sha256": "6f033851a16650db09d3237d28d736b30e9c09b844864f1f43fecadaa2e755a0",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/patch/README.md",
+      "target_sha256": "2a5846cae9bcb7a3e71d0e60fd1f88dc536bc19d5b23a3e31a9550b270749d3b",
+      "action": "GENERATED_REPOSITORY_NATIVE_SUCCESSOR"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/canonical_maintenance/RUNTIME_APPLY_CONTRACT.json",
+      "source_sha256": "0ae9b12cc35db3eca1494a0b7c095e09e993a3bf053ff19526501be7abd1d4bd",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/patch/RUNTIME_APPLY_CONTRACT.json",
+      "target_sha256": "0ae9b12cc35db3eca1494a0b7c095e09e993a3bf053ff19526501be7abd1d4bd",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/canonical_maintenance/build_patch_candidate.py",
+      "source_sha256": "a38d2a400bd2460aa78a49656eb6830cb70c3f54993dc4b6c160732cdd86f0a8",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/patch/build_patch_candidate.py",
+      "target_sha256": "ce5e1cbe889e4c4035d25600ec87906a399111ac84e20a85954d7bd97790386d",
+      "action": "GENERATED_REPOSITORY_NATIVE_SUCCESSOR"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/canonical_maintenance/reference/PATCHBUILD01_R2_V1_1_MACHINE_CONTRACT.json",
+      "source_sha256": "7c9a5614b5122dfb57780f894e06c785533f4a9ae3d7475039dd6e2fdc994d3c",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/patch/reference/PATCHBUILD01_R2_V1_1_MACHINE_CONTRACT.json",
+      "target_sha256": "7c9a5614b5122dfb57780f894e06c785533f4a9ae3d7475039dd6e2fdc994d3c",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/patch_build/canonical_maintenance/reference/validate_patchbuild_r2_v11.py",
+      "source_sha256": "4f026b99902b7ee061e54a5f5bc796378a5866995b5faa81c7ba32c1ac20be67",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/patch/reference/validate_patchbuild_r2_v11.py",
+      "target_sha256": "4f026b99902b7ee061e54a5f5bc796378a5866995b5faa81c7ba32c1ac20be67",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/postfix/authority/BR-V5-TIPS-ENBASE-CORR01-POSTFIX-CLOSURE01_RESULT_PACKAGE_v1_0.zip",
+      "source_sha256": "2676a0970d4202c6054ee0f1c74b56576c0f07d08801da06ad70a89422f7fc43",
+      "disposition": "PUBLIC_FROZEN",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/milestones/2026-09-10-final-playable/frozen/BR-V5-TIPS-ENBASE-CORR01-POSTFIX-CLOSURE01_RESULT_PACKAGE_v1_0.zip",
+      "target_sha256": "2676a0970d4202c6054ee0f1c74b56576c0f07d08801da06ad70a89422f7fc43",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/script_build/canonical_maintenance/DEPENDENCY_BOUNDARY.json",
+      "source_sha256": "f69ce86c2094c670a11d92a379216a582e45927889e642cf0a253869b9dd41da",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/script/DEPENDENCY_BOUNDARY.json",
+      "target_sha256": "381f759b0490ae75c142d21eb6b1b5a6d5acdf15ce083f755c4e8b6214824d5a",
+      "action": "GENERATED_REPOSITORY_NATIVE_SUCCESSOR"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/script_build/canonical_maintenance/DIRECT_PLAINTEXT_AUTHORITY.json",
+      "source_sha256": "c061cccd82f8620e58168073494c536e575e6f4b66647cd0c756b2bf6cb150af",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/script/DIRECT_PLAINTEXT_AUTHORITY.json",
+      "target_sha256": "a4ab8540ac03255432a3cc15639b7b9e66ab4acba5c1d0fbda3275bddbf8eefb",
+      "action": "GENERATED_REPOSITORY_NATIVE_SUCCESSOR"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/script_build/canonical_maintenance/README.md",
+      "source_sha256": "bf19a7288c47f0d400a658bf0e4ddb6bb1919866774e2aaa5e3e10e00578d786",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/script/README.md",
+      "target_sha256": "595e5a3d551463349ab0a4f7aa3cec8f7bdce93257be7cf0422465cba0cc2f02",
+      "action": "GENERATED_REPOSITORY_NATIVE_SUCCESSOR"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/script_build/canonical_maintenance/validate_direct_plaintext_authority.py",
+      "source_sha256": "a6af3b1d2b0a58734993c2e4d66c0fecbc6be6d4cdd013ec98b63737a535a3af",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/maintenance/script/validate_direct_plaintext_authority.py",
+      "target_sha256": "a6af3b1d2b0a58734993c2e4d66c0fecbc6be6d4cdd013ec98b63737a535a3af",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/script_build/expected_ledgers/SCX_HASH_LEDGER.csv",
+      "source_sha256": "3f6443ce225017277fe8ff31d44a2f71029b96a3e28f2908ebb8ba3414aabc2e",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/authority/validation/SCX_HASH_LEDGER.csv",
+      "target_sha256": "3f6443ce225017277fe8ff31d44a2f71029b96a3e28f2908ebb8ba3414aabc2e",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "B_POSTFIX_MEMBER",
+      "source_path": "project_sources/terminology/SGMDE_BlindReview_Normative_Terminology_v2.2.md",
+      "source_sha256": "641e9d46f83837677be0bc232c9e0d2e4dbb008ec3727be2ce79ac76d895356e",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/docs/SGMDE_BlindReview_Normative_Terminology_v2.2.md",
+      "target_sha256": "641e9d46f83837677be0bc232c9e0d2e4dbb008ec3727be2ce79ac76d895356e",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "EXTRA_ACCEPTED_MILESTONE_INPUT",
+      "source_path": "accepted production candidate:berd/MDE.bmp",
+      "source_sha256": "855457b70e4c450b448c8589f2a6f221e05ba5b50fb3d22930cc5a610b510e72",
+      "disposition": "PUBLIC_LOOSE",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/patch/berd/MDE.bmp",
+      "target_sha256": "855457b70e4c450b448c8589f2a6f221e05ba5b50fb3d22930cc5a610b510e72",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "EXTRA_ACCEPTED_MILESTONE_INPUT",
+      "source_path": "BR-V5_MAINTENANCE_SOURCE_FREEZE_INDEX_POSTFIX_v1_0.zip",
+      "source_sha256": "7f9463b8b5133775080f44044ad68d692ffb398e62de375ea4c7fa25fb42389a",
+      "disposition": "PUBLIC_FROZEN",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/milestones/2026-09-10-final-playable/frozen/BR-V5_MAINTENANCE_SOURCE_FREEZE_INDEX_POSTFIX_v1_0.zip",
+      "target_sha256": "7f9463b8b5133775080f44044ad68d692ffb398e62de375ea4c7fa25fb42389a",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "EXTRA_ACCEPTED_MILESTONE_INPUT",
+      "source_path": "BR-V5-POSTFIX-MAINT-SRCREFREEZE01-REPRO01_RESULT_PACKAGE_v1_0.zip",
+      "source_sha256": "be99fe483f379015cb73db0f8a555046e693a63d754a6376628894ec1f058545",
+      "disposition": "PUBLIC_FROZEN",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/milestones/2026-09-10-final-playable/frozen/BR-V5-POSTFIX-MAINT-SRCREFREEZE01-REPRO01_RESULT_PACKAGE_v1_0.zip",
+      "target_sha256": "be99fe483f379015cb73db0f8a555046e693a63d754a6376628894ec1f058545",
+      "action": "COPY_EXACT"
+    },
+    {
+      "source_kind": "EXTRA_ACCEPTED_MILESTONE_INPUT",
+      "source_path": "BR-V5-POSTFIX-FINAL-CHANGE-IMPACT-GATE01_RESULT_PACKAGE_v1_0.zip",
+      "source_sha256": "8b8647586c37e5bcfc42e5934d0774964f0244d7974167c11d10feb5dded05bc",
+      "disposition": "PUBLIC_FROZEN",
+      "target_repo_path": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/milestones/2026-09-10-final-playable/frozen/BR-V5-POSTFIX-FINAL-CHANGE-IMPACT-GATE01_RESULT_PACKAGE_v1_0.zip",
+      "target_sha256": "8b8647586c37e5bcfc42e5934d0774964f0244d7974167c11d10feb5dded05bc",
+      "action": "COPY_EXACT"
+    }
+  ]
+}

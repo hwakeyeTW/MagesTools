@@ -1,0 +1,36 @@
+{
+  "classification": "NEW_CANONICAL_MAINTENANCE_IMPLEMENTATION_CANDIDATE",
+  "task": "BR-V5-MAINT-SRCFREEZE01-FONT-MACHINERY-REPAIR01",
+  "declared_dependencies": {
+    "B_domain": [
+      {
+        "name": "BR-V5-FONT-RUNTIME-BUILD-SPEC_v1_1_PACKAGE.zip",
+        "sha256": "64838f19b453e780bca7ba6d099a0971fa23c24cb122d554e79046bf6fdd792d"
+      },
+      {
+        "name": "SteinsGate_MDE_TC_Patch_FinalText_RuntimeRC2.zip",
+        "sha256": "e91444df1f1ecef8279517d69c78bbe0dffbe49dff32098dd5d058c4a59e7575"
+      }
+    ],
+    "A_domain": [
+      {
+        "name": "GenYoGothic2TW-M.otf",
+        "sha256": "7f0b3856b79bb254c0deabad6fac9ae8fe00c8bef3c2330ec74efa142473c21a",
+        "bytes": 10726468,
+        "packaged_with_result": false
+      },
+      {
+        "name": "BR-V5-MAINT-SRCFREEZE01-FONT-TOOLCHAIN-CAPTURE_v1_0.zip",
+        "sha256": "3b30c76c15b6e2ce2112219641030e5b087894752347fd7be6215f614484113a",
+        "packaged_with_result": false
+      }
+    ]
+  },
+  "runtime_binding": {
+    "python": "/opt/pyvenv/bin/python",
+    "imagemagick": "/opt/imagemagick/bin/magick",
+    "network_required": false,
+    "PATH_resolution_required": false
+  },
+  "historical_source_status": "HISTORICAL_SOURCE_NOT_DURABLY_RECOVERED"
+}

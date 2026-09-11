@@ -1,0 +1,38 @@
+{
+  "schema": "BR-V5-POSTFREEZE-PATCHBUILD01-R2-CONTRACT-1.1",
+  "supersedes_execution_package_v1_0_sha256": "5ab91a67cb935d04d898fd8e3f2517464d06aa1be06fcf3d256f6836e9f0623b",
+  "correction_authority_sha256": "712ed347da44579ec7e8a7b74d6e52c0bdea776cc5fd9e7af14f335b938f4937",
+  "root_cause": "RC-PATCHMETA-02",
+  "baseline": {
+    "r1_result_sha256": "1497c55a69cb95985815360e3401cf190afcd66579bb5962c3001d12fe9ad6ab",
+    "r1_release_sha256": "64bed4c24add7003e9c78c98b5782040495cf0e7b88ae032e019d03c861cdc30"
+  },
+  "authorized_change": {
+    "path": "berd/meta.json",
+    "old_sha256": "0a0d9bd158698a8ff92b0435bf9a330f6452ed48f136b29d377001a8c070ae2e",
+    "new_sha256": "1cabcacce4dde81a29b73a1363b92cdbad0d378fff1f866739a30545a75e1837"
+  },
+  "metadata_semantics": {
+    "parsed_notice_actual_lf_count": 3,
+    "parsed_notice_literal_backslash_n_count": 0,
+    "raw_json_uses_normal_newline_escape": true
+  },
+  "preserve": {
+    "EasyPatcher.exe": "75404cfe8aac6d1d69f4d7f8fa1a9ec03e746699184c538350d0ad7652fb315d",
+    "EasyPatcher.exe.config": "f82338e8e9c746b5d95cd2ccc7bf94dd5de2b9b8982fffddf2118e475de50e15",
+    "fastJSON.dll": "6ae4faf9c1e2eb4a9eead6843c56cba6d7ab77f0b6753aa8c3564d6562de143b",
+    "MagesLib.dll": "e82996f2888998c2a43f4025b98c3b9990f9285162adc47f1139e5ddcda129e1",
+    "berd/MDE.bmp": "855457b70e4c450b448c8589f2a6f221e05ba5b50fb3d22930cc5a610b510e72",
+    "berd/script.json": "2fb7fa0b69d7fc9b6736698c1ca02eb4efa53aac502590e94b087c2582bb5978",
+    "berd/system.json": "164c905ae2eddfb5bc026feac3f1735ad39deb8106aa3d469f377bb058bb01b2"
+  },
+  "expected_release": {
+    "sha256": "c221b13a5be3b4252c1c949818da6b7fee3f7604b8d72825b2a7e64ea7ca7cb9",
+    "bytes": 10398621,
+    "changed_vs_r1": [
+      "berd/meta.json"
+    ],
+    "added": [],
+    "removed": []
+  }
+}

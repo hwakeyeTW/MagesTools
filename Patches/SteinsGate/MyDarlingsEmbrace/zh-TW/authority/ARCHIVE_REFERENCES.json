@@ -1,0 +1,158 @@
+{
+  "schema": "BR-V5-REPOSITORY-ARCHIVE-REFERENCES-1.0",
+  "milestone_id": "2026-09-10-final-playable",
+  "not_in_git_tree": {
+    "Artifact_A": {
+      "sha256": "6bfa863ab45f77a97832ceb25c9dab916c29b5c4e5a39c816570fa713af4658b",
+      "bytes": 420808773,
+      "reason": "private/original dependency archive"
+    },
+    "B_postfix": {
+      "sha256": "1445e2bb41d25063102b53e041bec8b8210b4b6ad1729eb1d394b2a656b43c73",
+      "bytes": 151066342,
+      "reason": "immutable mixed maintenance freeze; selected active sources are materialized separately"
+    },
+    "runtime_script_mpk": {
+      "sha256": "d12dfb0b833058dfe952af65ab9c7d8c70ecb5f1d8d82e128da8b564d0b7c1dc",
+      "bytes": 4639574
+    },
+    "runtime_system_mpk": {
+      "sha256": "83ec04c94f16f65d3f056a1297c580a4ddb6f6522311e9b74d51f490ef24e109",
+      "bytes": 169604760
+    }
+  },
+  "a01_archive_only_items": [
+    {
+      "source_path": "project_sources/font_build/authority/BR-V5-POSTFREEZE-FONTBUILD01-A02_RESUME_AUTHORITY_PACKAGE_v1_0.zip",
+      "sha256": "57bc27487897bb7777481842b2156dd47332097de2eedda8feb0e61949e713ed",
+      "bytes": 3541162,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/font_build/baseline/SteinsGate_MDE_TC_Patch_FinalText_RuntimeRC2.zip",
+      "sha256": "e91444df1f1ecef8279517d69c78bbe0dffbe49dff32098dd5d058c4a59e7575",
+      "bytes": 6859078,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/font_build/canonical_maintenance/evidence/BR-V5-MAINT-SRCFREEZE01-FONT-MACHINERY-REPAIR01-VAL01_COORDINATOR_ACCEPTANCE_PACKAGE_v1_0.zip",
+      "sha256": "61dd9d9da1e778ffa6f04aa3f1c6e4df0cf84c043feac8046bc2579d6f537a1f",
+      "bytes": 10208,
+      "reason": "intermediate font execution/evidence package; current REPRO supersedes public need"
+    },
+    {
+      "source_path": "project_sources/font_build/canonical_maintenance/evidence/BR-V5-MAINT-SRCFREEZE01-FONT-MACHINERY-REPAIR01-VAL01_EXECUTION_PACKAGE_v1_0.zip",
+      "sha256": "27c3271b861c9751abc664011542240f13ff85ef591f129ee7a7762452a7108f",
+      "bytes": 10487298,
+      "reason": "intermediate font execution/evidence package; current REPRO supersedes public need"
+    },
+    {
+      "source_path": "project_sources/font_build/canonical_maintenance/evidence/BR-V5-MAINT-SRCFREEZE01-FONT-MACHINERY-REPAIR01-VAL01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "0ec8a030b0b3bfe13622eff7f96bf5c1f111fdfb0f61cb49be6cfadeb648bbfa",
+      "bytes": 171213,
+      "reason": "intermediate font execution/evidence package; current REPRO supersedes public need"
+    },
+    {
+      "source_path": "project_sources/font_build/canonical_maintenance/evidence/BR-V5-MAINT-SRCFREEZE01-FONT-MACHINERY-REPAIR01_EXECUTION_PACKAGE_v1_0.zip",
+      "sha256": "2c74986f0f8a3d8296183d4075ca6fd7c696655ecd8faa02a1283af99f48c483",
+      "bytes": 10614316,
+      "reason": "intermediate font execution/evidence package; current REPRO supersedes public need"
+    },
+    {
+      "source_path": "project_sources/font_build/canonical_maintenance/evidence/BR-V5-MAINT-SRCFREEZE01-FONT-MACHINERY-REPAIR01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "61c51bdb9547561123e752c0fb544b26f77ee95f3daeaf18a5e6680797979735",
+      "bytes": 216612,
+      "reason": "intermediate font execution/evidence package; current REPRO supersedes public need"
+    },
+    {
+      "source_path": "project_sources/font_build/provenance/BR-V5-MAINT-SRCFREEZE01-FONT-A02-MACHINERY-RECOVERY_BLOCKED_v1_0.zip",
+      "sha256": "86286936f449fa11775051c19c8b8d401467177b9b0b455b09e3fdb3dc4efd80",
+      "bytes": 13319,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/font_build/specs/BR-V5-FONT-RUNTIME-BUILD-SPEC_v1_1_PACKAGE.zip",
+      "sha256": "64838f19b453e780bca7ba6d099a0971fa23c24cb122d554e79046bf6fdd792d",
+      "bytes": 10372,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/font_build/validation/BR-V5-POSTFREEZE-FONTBUILD01-A02_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "f0c3792329f38dc6dca192f71f6e5cb441af15ad417ccd7d0e7c8dbf3e5a487b",
+      "bytes": 12227172,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/patch_build/execution/BR-V5-POSTFREEZE-PATCHBUILD01-R2_EXECUTION_PACKAGE_v1_1.zip",
+      "sha256": "7244336f28bd3b63fbd8b6e595d687614ee5d233a2d5df5ab76df5a914a87f25",
+      "bytes": 8768060,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/patch_build/validation/BR-V5-POSTFREEZE-PATCHBUILD01-R2_RESULT_PACKAGE_v1_1.zip",
+      "sha256": "05767b142b36e2b67f15d9a6ceb5e2f9d9f568119b317cfd5334e14873ac67e1",
+      "bytes": 10420859,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/postfix/CURRENT_AUTHORITY.json",
+      "sha256": "15ae602637eb5ea83fd6b4f79d364d60206401f1bb5134babce16f379da31e78",
+      "bytes": 1111,
+      "reason": "other postfix intermediate/result artifacts are retained by frozen B and final milestone identities"
+    },
+    {
+      "source_path": "project_sources/postfix/production/BR-V5-POSTFIX-PRODBUILD01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "bd25f76f9d4b640d8345cddbf1b56fb0eb045ef4df2988c86dfeda3507f432b5",
+      "bytes": 6855124,
+      "reason": "other postfix intermediate/result artifacts are retained by frozen B and final milestone identities"
+    },
+    {
+      "source_path": "project_sources/postfix/validation/BR-V5-TIPS-ENBASE-CORR01-APPLYVAL01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "ce9294bc17c4b2df96ee08d0dfc58fb7204b1deda13cf16bbdf2deffde378257",
+      "bytes": 22642,
+      "reason": "other postfix intermediate/result artifacts are retained by frozen B and final milestone identities"
+    },
+    {
+      "source_path": "project_sources/postfix/validation/BR-V5-TIPS-ENBASE-CORR01-GAMEPLAY01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "9cb824b99ba43a2fd333bf1c15b6d73bac2972096328fe72935c82629c10e394",
+      "bytes": 8539730,
+      "reason": "other postfix intermediate/result artifacts are retained by frozen B and final milestone identities"
+    },
+    {
+      "source_path": "project_sources/provenance/gate04/BR-V5-PLAYABLE-GATE04_RESULT_v1_0.zip",
+      "sha256": "86087ac6d49d57989242e3610fcb460049e8d5c8ab756e66805e9c50f83ac215",
+      "bytes": 60177,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/provenance/source_lineage/BR-V5-PREP01-R1_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "6ecc650c0ae6ceae1497cc09e0fefa503b7fb06bf3a4230af1bb3ec40633986c",
+      "bytes": 7113954,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/script_build/execution/BR-V5-POSTFREEZE-SCRIPTBUILD01-BUILD01_EXECUTION_PACKAGE_v1_0.zip",
+      "sha256": "ef06831ce3b2f78a6df97d76c2556cc0879e792be5982a770bbb72b7e02a079f",
+      "bytes": 14820713,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/script_build/execution/BR-V5-POSTFREEZE-SCRIPTBUILD01-PREP01_EXECUTION_PACKAGE_v1_0.zip",
+      "sha256": "a2360d42bb441d2f686e40d0582e029373aac74777dcb1f747b31ba154c45670",
+      "bytes": 21581799,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/script_build/prep/BR-V5-POSTFREEZE-SCRIPTBUILD01-PREP01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "400b89894a086b7c912763a7fdedcd1d4341188709c8af980aa48b314e4f3ad2",
+      "bytes": 42612,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    },
+    {
+      "source_path": "project_sources/script_build/validation/BR-V5-POSTFREEZE-SCRIPTBUILD01-BUILD01_RESULT_PACKAGE_v1_0.zip",
+      "sha256": "80aebc465c953d10954d47a672b208f7d8468df5ecf37a4a4b2f07f204ff8250",
+      "bytes": 4580739,
+      "reason": "historical/intermediate validation, baseline, authority, execution or provenance package"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "BR-V5-POSTFIX-PATCH-DEPENDENCY-BOUNDARY-REPOSITORY-1.0",
+  "repository": "hwakeyeTW/MagesTools",
+  "game_root": "Patches/SteinsGate/MyDarlingsEmbrace/zh-TW",
+  "allowed_inputs": [
+    "external exact patch tool shell matching TOOLING_REFERENCE.json",
+    "patch/berd/MDE.bmp",
+    "patch/berd/meta.json",
+    "patch/berd/script.json",
+    "patch/berd/system.json"
+  ],
+  "prohibited_inputs": [
+    "milestones/**/frozen/** as generation payloads",
+    "historical pre-postfix script.json",
+    "historical runtime MPKs",
+    "installed game files",
+    "network-fetched substitutes"
+  ],
+  "expected_candidate": {
+    "sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
+    "bytes": 10418010
+  },
+  "source_provenance": {
+    "B_path": "project_sources/patch_build/canonical_maintenance/DEPENDENCY_BOUNDARY.json",
+    "adaptation": "REPOSITORY_NATIVE_PATH_REBIND"
+  }
+}
