@@ -3,11 +3,22 @@
   "milestone_id": "2026-09-10-final-playable",
   "release_status": "FINAL_PLAYABLE_RELEASE_ACCEPTED",
   "architecture": "EN_BASELINE_NO_JP_ONLY_STRUCTURAL_IMPORT",
+  "public_release": {
+    "version": "1.0.0",
+    "tag": "sgmde-zh-tw-v1.0.0",
+    "title": "STEINS;GATE 比翼雙飛的戀人 — 台灣繁體中文化 v1.0.0",
+    "asset": {
+      "filename": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip",
+      "sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
+      "bytes": 10418010
+    }
+  },
   "production_candidate": {
     "filename": "SteinsGate_MDE_TC_Patch_BRV5_v1.2.0.0_POSTFIXCandidate_v1_0.zip",
     "sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
     "bytes": 10418010,
-    "repository_storage": "GITHUB_RELEASE_ASSET"
+    "repository_storage": "GITHUB_RELEASE_ASSET",
+    "published_as": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip"
   },
   "patch_source": {
     "berd/script.json": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
