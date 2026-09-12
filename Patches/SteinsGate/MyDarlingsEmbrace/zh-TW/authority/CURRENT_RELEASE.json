@@ -1,7 +1,8 @@
 {
-  "schema": "BR-V5-REPOSITORY-CURRENT-RELEASE-1.0",
+  "schema": "BR-V5-REPOSITORY-CURRENT-RELEASE-1.1",
   "milestone_id": "2026-09-10-final-playable",
   "release_status": "FINAL_PLAYABLE_RELEASE_ACCEPTED",
+  "publication_metadata_status": "PUBLICATION_METADATA_CORRECTED",
   "architecture": "EN_BASELINE_NO_JP_ONLY_STRUCTURAL_IMPORT",
   "public_release": {
     "version": "1.0.0",
@@ -9,21 +10,32 @@
     "title": "STEINS;GATE 比翼雙飛的戀人 — 台灣繁體中文化 v1.0.0",
     "asset": {
       "filename": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip",
-      "sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
-      "bytes": 10418010
+      "sha256": "110b994b31c9cc6922d72a99e095b0ea5928de92eff81c96718de342af8cfc9a",
+      "bytes": 10417886
     }
   },
   "production_candidate": {
+    "filename": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip",
+    "sha256": "110b994b31c9cc6922d72a99e095b0ea5928de92eff81c96718de342af8cfc9a",
+    "bytes": 10417886,
+    "lineage": "FROZEN_ACCEPTED_BASELINE_PLUS_PREPUBLICATION_METADATA_OVERLAY",
+    "publication_target": "GITHUB_RELEASE_ASSET"
+  },
+  "baseline_distribution": {
     "filename": "SteinsGate_MDE_TC_Patch_BRV5_v1.2.0.0_POSTFIXCandidate_v1_0.zip",
     "sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
-    "bytes": 10418010,
-    "repository_storage": "GITHUB_RELEASE_ASSET",
-    "published_as": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip"
+    "bytes": 10418010
+  },
+  "publication_correction": {
+    "authority": "authority/PREPUBLICATION_V100_CORRECTION.json",
+    "classification": "PREPUBLICATION_METADATA_CORRECTION",
+    "metadata_overlay_sha256": "4fd4030960bd24e15f9838108233fc9340d5ecb5c8439af7584b5dd22a6eb92d",
+    "phase03_validation_sha256": "03a65201b0dea0473a8148fed97ec963ac843f5e8b18ead2f520cb24a7984db1"
   },
   "patch_source": {
     "berd/script.json": "ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417",
     "berd/system.json": "164c905ae2eddfb5bc026feac3f1735ad39deb8106aa3d469f377bb058bb01b2",
-    "berd/meta.json": "1cabcacce4dde81a29b73a1363b92cdbad0d378fff1f866739a30545a75e1837",
+    "berd/meta.json": "1be79a34bbcb642ac2e295675bb909958807f6eab6484a0a6f822c3e7fbe9148",
     "berd/MDE.bmp": "855457b70e4c450b448c8589f2a6f221e05ba5b50fb3d22930cc5a610b510e72"
   },
   "runtime": {
@@ -32,12 +44,13 @@
     "Game.exe": "a7225cc3c19c02c690ea486d293388c3015ff106eacc64da7be157fdfa0bf891"
   },
   "reproduction": {
-    "result_sha256": "be99fe483f379015cb73db0f8a555046e693a63d754a6376628894ec1f058545",
-    "coverage": "96/96 PASS; NOT_RUN=0"
+    "frozen_baseline_result_sha256": "be99fe483f379015cb73db0f8a555046e693a63d754a6376628894ec1f058545",
+    "frozen_baseline_coverage": "96/96 PASS; NOT_RUN=0",
+    "metadata_overlay_sha256": "4fd4030960bd24e15f9838108233fc9340d5ecb5c8439af7584b5dd22a6eb92d",
+    "corrected_candidate_deterministic_rebuild": "PASS"
   },
   "final_gate": {
     "result_sha256": "8b8647586c37e5bcfc42e5934d0774964f0244d7974167c11d10feb5dded05bc",
     "verdict": "PASS / FINAL_PLAYABLE_RELEASE_ACCEPTED"
-  },
-  "meta_notice_note": "patch/berd/meta.json is byte-frozen and retains pre-Final-Gate candidate wording; this repository-native authority file states current release status."
+  }
 }
