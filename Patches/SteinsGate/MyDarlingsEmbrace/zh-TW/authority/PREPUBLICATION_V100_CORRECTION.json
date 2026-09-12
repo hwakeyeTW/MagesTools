@@ -1,0 +1,43 @@
+{
+  "schema": "BR-V5-PREPUBLICATION-V100-CORR01-REPOSITORY-CORRECTION-1.0",
+  "task": "BR-V5-PREPUBLICATION-V100-CORR01",
+  "classification": "PREPUBLICATION_METADATA_CORRECTION",
+  "withdrawn_staging": {
+    "classification": "ABORTED_PREPUBLICATION_STAGING",
+    "release_id": 387369448,
+    "tag": "sgmde-zh-tw-v1.0.0",
+    "tag_target": "1e85cba9092c6426f5edf240f07311f6fbdc07b7",
+    "asset_filename": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip",
+    "asset_sha256": "edbd65e66eb9e650be0cbe8a3763cd669eb7f1a15b0e7005148d993431a26219",
+    "asset_bytes": 10418010,
+    "download_count_at_withdrawal": 3,
+    "download_count_interpretation": "USER_ATTESTATION_INTERNAL_VALIDATION_ONLY"
+  },
+  "corrected_release": {
+    "version": "1.0.0",
+    "tag": "sgmde-zh-tw-v1.0.0",
+    "title": "STEINS;GATE 比翼雙飛的戀人 — 台灣繁體中文化 v1.0.0",
+    "asset_filename": "SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip",
+    "asset_sha256": "110b994b31c9cc6922d72a99e095b0ea5928de92eff81c96718de342af8cfc9a",
+    "asset_bytes": 10417886,
+    "meta_sha256": "1be79a34bbcb642ac2e295675bb909958807f6eab6484a0a6f822c3e7fbe9148",
+    "steam_app_id": "970560"
+  },
+  "scope": {
+    "payload_member_changed": "berd/meta.json",
+    "all_other_archive_members_byte_identical": true,
+    "runtime_semantics_reopened": false,
+    "translation_gate_reopened": false,
+    "tips_gate_reopened": false,
+    "font_gate_reopened": false,
+    "gameplay_gate_reopened": false
+  },
+  "evidence": {
+    "phase01_acceptance_package_sha256": "8ad84dcb26be0f00dbe072fdefbec815d6270fce3d8940bb486fa43fd92b50ff",
+    "phase02_result_package_sha256": "eb4a65cc8f5c6731aef9ca8e3c6a929f9097b84cdb50ec864b327640c8f7162e",
+    "metadata_overlay_package_sha256": "4fd4030960bd24e15f9838108233fc9340d5ecb5c8439af7584b5dd22a6eb92d",
+    "phase03_result_package_sha256": "03a65201b0dea0473a8148fed97ec963ac843f5e8b18ead2f520cb24a7984db1"
+  },
+  "repository_base_before_correction": "10c1146cc0a3e2dc24a3884ff65d4f9cd8696c1f",
+  "next_publication_step": "RECREATE_TAG_AND_GITHUB_RELEASE_AFTER_REPOSITORY_CORRECTION_MERGE"
+}
