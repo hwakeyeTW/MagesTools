@@ -1,34 +1,18 @@
 # STEINS;GATE 比翼雙飛的戀人 — 台灣繁體中文化模組
 
-**STEINS;GATE: My Darling's Embrace — Traditional Chinese (Taiwan) Localization Module**
+*STEINS;GATE: My Darling's Embrace — Traditional Chinese (Taiwan) Localization Module*
 
 > 本專案為玩家製作的非官方台灣繁體中文化模組，並非 MAGES. Inc.、Spike Chunsoft Co., Ltd. 或其他原作權利人製作或認可的官方繁體中文版。完整權利與第三方聲明請參閱 [`legal/`](legal/)。
 
-## 專案概覽
+## 專案簡介
 
 本模組提供 Steam 英文版 *STEINS;GATE: My Darling's Embrace* 的台灣繁體中文在地化內容，並使用 EasyPatcher 將 `patch/berd/` 中的中文化資料套用至使用者自行持有的遊戲安裝目錄。
 
-- **目前版本**：v1.0.0
-- **Steam App ID**：`970560`
 - **適用版本**：Steam 英文版
-- **Git tag**：`sgmde-zh-tw-v1.0.0`
-- **Release**：<https://github.com/hwakeyeTW/MagesTools/releases/tag/sgmde-zh-tw-v1.0.0>
+- **Steam App ID**：`970560`
+- **介面／文本目標**：台灣繁體中文
 
-本專案在使用者／文件層級使用「**模組**」稱呼完整中文化成果；既有 `Patches/`、`patch/berd/`、EasyPatcher、檔名中的 `Patch` 等則屬技術路徑、工具名稱或已發布 artifact identity，因此維持原名不變。
-
-## 下載與版本驗證
-
-目前正式發布檔案：
-
-`SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip`
-
-SHA-256：
-
-`110b994b31c9cc6922d72a99e095b0ea5928de92eff81c96718de342af8cfc9a`
-
-此檔名中的 `Patch` 為已發布 v1.0.0 artifact identity 的一部分，不因文件用語改為「模組」而重新命名或重新封裝。
-
-套用前請使用乾淨的 Steam 英文版遊戲檔案，或保留由乾淨英文版建立的 `USRDIR.bak`。EasyPatcher v1.2.0.0 支援 Steam 安裝路徑自動偵測。
+套用前請使用乾淨的 Steam 英文版遊戲檔案，或保留由乾淨英文版建立的 `USRDIR.bak`。EasyPatcher 支援 Steam 安裝路徑自動偵測。
 
 ## 翻譯與在地化方法
 
@@ -36,7 +20,13 @@ SHA-256：
 
 主要在地化工作流程使用 **OpenAI GPT-5.6 Sol** 作為語言模型工具，並搭配專案級術語規範、批次審查、finding adjudication、corrective translation、結構驗證與實機測試。AI 輸出不會因模型產生本身而自動成為最終譯文。
 
-詳細說明：[`docs/LOCALIZATION_METHODOLOGY.md`](docs/LOCALIZATION_METHODOLOGY.md)
+詳細說明請參閱 [`docs/LOCALIZATION_METHODOLOGY.md`](docs/LOCALIZATION_METHODOLOGY.md)。
+
+## 下載
+
+請至 [GitHub Releases](https://github.com/hwakeyeTW/MagesTools/releases/latest) 下載最新版本的《STEINS;GATE 比翼雙飛的戀人》台灣繁體中文化模組。
+
+各版本的檔案名稱、版本資訊與完整性驗證資料，以對應的 Release 頁面為準。
 
 ## 文件索引
 
@@ -45,12 +35,14 @@ SHA-256：
 | [`docs/LOCALIZATION_METHODOLOGY.md`](docs/LOCALIZATION_METHODOLOGY.md) | 翻譯權威順序、AI 使用揭露、官方／社群譯名參考原則。 |
 | [`docs/CREDITS.md`](docs/CREDITS.md) | 原作、工具、字型、AI 工具與社群致謝。 |
 | [`legal/NOTICE.md`](legal/NOTICE.md) | 非官方專案、原作權利、商標與授權範圍聲明。 |
+| [`legal/NOTICE.en.md`](legal/NOTICE.en.md) | `legal/NOTICE.md` 的英文參考版本。 |
 | [`legal/THIRD_PARTY_NOTICES.md`](legal/THIRD_PARTY_NOTICES.md) | MagesTools、字型與其他第三方元件資訊。 |
-| [`docs/SOURCE_LAYOUT.md`](docs/SOURCE_LAYOUT.md) | 公開／私有來源與 repository path 分工。 |
+| [`legal/THIRD_PARTY_NOTICES.en.md`](legal/THIRD_PARTY_NOTICES.en.md) | 第三方聲明的英文參考版本。 |
+| [`docs/SOURCE_LAYOUT.md`](docs/SOURCE_LAYOUT.md) | 公開／私有來源與 Repository path 分工。 |
 | [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) | 維護資料與 repository-native maintenance 說明。 |
 | [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) | 重製與驗證資訊。 |
 | [`CHANGELOG.md`](CHANGELOG.md) | 公開版本變更紀錄。 |
-| [`NOTICE.md`](NOTICE.md) | 穩定的 Notice 入口，轉向 `legal/` 內完整聲明。 |
+| [`NOTICE.md`](NOTICE.md) | 穩定的 Notice 入口，導向 `legal/` 內完整聲明。 |
 
 ## 專案結構
 
@@ -63,21 +55,7 @@ SHA-256：
 
 完整官方日文／官方英文語料、alignment 與 recovered-source corpus 不隨公開 Repository 完整散布；其來源綁定請參閱 `authority/` 與 [`docs/SOURCE_LAYOUT.md`](docs/SOURCE_LAYOUT.md)。
 
-## Release authority
-
-Current release identity: **v1.0.0** (`FINAL_PLAYABLE_RELEASE_ACCEPTED` + `PUBLICATION_METADATA_CORRECTED`).
-
-Canonical technical patch source is under `patch/berd/`. The accepted plaintext script authority is `patch/berd/script.json` with SHA-256:
-
-`ba565c667981168fa8b987fb5d40689461a3d7a87c635e6539a413870325b417`
-
-The accepted self-contained distribution ZIP is `SteinsGate_MyDarlingsEmbrace_zh-TW_Patch_v1.0.0.zip` with SHA-256:
-
-`110b994b31c9cc6922d72a99e095b0ea5928de92eff81c96718de342af8cfc9a`
-
-`patch/berd/meta.json` carries the final end-user release wording and `steam_app_id = "970560"` for EasyPatcher Steam installation auto-detection.
-
-EasyPatcher binaries are not duplicated in this directory; see `authority/TOOLING_REFERENCE.json`.
+使用者文件以「**模組**」稱呼完整中文化成果；既有 `Patches/`、`patch/berd/`、EasyPatcher，以及已發布檔名中的 `Patch` 等技術路徑、工具名稱或既有 artifact identity 仍維持原名。
 
 ## 問題回報
 

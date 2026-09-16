@@ -1,35 +1,35 @@
 # MagesTools
 
-This repository is a fork of [`fengberd/MagesTools`](https://github.com/fengberd/MagesTools), an all-in-one toolset for the MAGES (aka 5pb.) visual novel engine.
+本 Repository 為 [`fengberd/MagesTools`](https://github.com/fengberd/MagesTools) 的 fork，主要提供 MAGES（5pb.）視覺小說引擎相關工具，並作為本專案各遊戲中文化模組的公開來源 Repository。
 
-Major functions include:
+## 主要功能
 
-- MPK unpacking / packing;
-- SCX string exporting / patching;
-- EasyPatcher-based game localization deployment.
+- MPK 解包／封包；
+- SCX 字串匯出／套用；
+- 透過 EasyPatcher 套用遊戲中文化資料。
 
-The repository-level software remains governed by the repository [`LICENSE`](LICENSE). Game-specific localization modules may include separate rights, notices, source authority, maintenance metadata, and third-party attributions under their own paths.
+Repository 層級的軟體依 [`LICENSE`](LICENSE) 所載授權條款提供。各遊戲中文化模組可能另有原作權利、第三方授權、來源權威與維護資訊，請依各模組目錄內文件為準。
 
-## Repository structure
+## Repository 結構
 
-| Path | Purpose |
+| 路徑 | 用途 |
 | --- | --- |
-| `EasyPatcher/` | EasyPatcher source and UI implementation. |
-| `MagesLib/` | Shared MAGES format parsing / writing library. |
-| `MagesTools/` | General MAGES utility tooling. |
-| `Scripts/` | Auxiliary processing/build scripts. |
-| `lib/` | Shared binary dependencies used by repository software. |
-| `Patches/` | Game/series/locale-specific localization module sources, authority metadata, maintenance material, and documentation. |
+| `EasyPatcher/` | EasyPatcher 原始碼與介面實作。 |
+| `MagesLib/` | 共用的 MAGES 格式解析／寫入函式庫。 |
+| `MagesTools/` | 一般 MAGES 工具。 |
+| `Scripts/` | 輔助處理與建置腳本。 |
+| `lib/` | Repository 軟體使用的共用 binary dependency。 |
+| `Patches/` | 依遊戲／系列／語系區分的中文化模組來源、authority、維護資料與文件。 |
 
-See [`Patches/README.md`](Patches/README.md) for the game-localization project index.
+各遊戲中文化專案的索引請參閱 [`Patches/README.md`](Patches/README.md)。
 
-## Localization modules
+## 中文化模組
 
-Current public localization work includes:
+目前公開的中文化專案包括：
 
-- [`STEINS;GATE: My Darling's Embrace — 台灣繁體中文化模組`](Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/README.md)
+- [`STEINS;GATE 比翼雙飛的戀人 — 台灣繁體中文化模組`](Patches/SteinsGate/MyDarlingsEmbrace/zh-TW/README.md)
 
-Game-specific legal notices, translation methodology, third-party acknowledgements, and release authority are maintained inside each module directory rather than duplicated at repository root.
+各模組的著作權與第三方聲明、翻譯方法、致謝、維護與 authority 資料，皆依專案結構保存在各自的遊戲／語系目錄中，而不重複堆疊於 Repository 根目錄。
 
 ## EasyPatcher（繁體中文）
 
@@ -56,12 +56,12 @@ Game-specific legal notices, translation methodology, third-party acknowledgemen
 }
 ```
 
-## Upstream and license
+## 上游專案與授權
 
-Original MagesTools upstream:
+原始 MagesTools 上游專案：
 
-- Repository: [`fengberd/MagesTools`](https://github.com/fengberd/MagesTools)
-- Original software copyright: `Copyright (c) 2020 FENGberd`
-- License: MIT
+- Repository：[`fengberd/MagesTools`](https://github.com/fengberd/MagesTools)
+- 原始軟體著作權聲明：`Copyright (c) 2020 FENGberd`
+- 授權：MIT License
 
-This fork retains that upstream lineage while adding Taiwan Traditional Chinese EasyPatcher localization, Steam installation-path detection, and game-specific localization-module maintenance material.
+本 fork 保留原始工具鏈 lineage，並加入台灣繁體中文 EasyPatcher 介面、Steam 安裝路徑偵測，以及各遊戲中文化模組所需的公開維護資料。

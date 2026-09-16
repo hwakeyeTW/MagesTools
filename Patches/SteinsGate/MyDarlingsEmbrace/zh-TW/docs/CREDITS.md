@@ -1,8 +1,8 @@
-# Credits / 致謝
+# 致謝 / Credits
 
 本文件記錄《STEINS;GATE 比翼雙飛的戀人》台灣繁體中文化模組所依賴或參考的重要原作、工具、字型、AI 工具與社群貢獻來源。
 
-## Original work / 原作
+## 原作
 
 感謝 MAGES. Inc. 與所有參與 *STEINS;GATE* 系列開發與創作的人員。
 
@@ -30,19 +30,19 @@ Steam 國際版本由 **Spike Chunsoft Co., Ltd.** 發行。
 
 模型輸出仍受 JP-first source authority、terminology governance、independent review、Planner adjudication、runtime validation 與 playtest evidence 約束。詳細 AI 使用揭露請參閱 [`LOCALIZATION_METHODOLOGY.md`](LOCALIZATION_METHODOLOGY.md)。
 
-## Official Traditional Chinese terminology references
+## 官方繁體中文術語參考
 
 本專案為維持 Science Adventure／STEINS;GATE 系列術語一致性，會參考既有官方繁體中文譯名；適用時，*STEINS;GATE ELITE* 的官方繁體中文術語是重要參考來源之一。
 
 這類參考用於 terminology alignment，而不是將其他官方版本文本 wholesale 搬入本模組。
 
-## Taiwan STEINS;GATE community / 台灣玩家社群
+## 台灣 STEINS;GATE 玩家社群
 
 感謝長期參與 *STEINS;GATE* 討論、作品推廣與譯名使用的台灣玩家社群。部分沒有單一適用官方譯名的網路文化、宅文化與系列慣用稱呼，會參考台灣社群長期形成的自然用語。
 
 「社群慣用」不應取代可具名的直接 attribution。若後續確認特定公開 Wiki、翻譯專案、測試者或貢獻者對本模組形成可辨識的直接貢獻，應在此文件補上具名來源與連結。
 
-## Testing, review, and issue reporting
+## 測試、審查與問題回報
 
 感謝所有參與翻譯校對、術語確認、blind review、runtime 測試、實機遊玩、顯示問題確認與問題回報的人員。
 
