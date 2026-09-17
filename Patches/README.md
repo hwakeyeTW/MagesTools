@@ -2,7 +2,7 @@
 
 此目錄保存各遊戲／語系專屬的中文化模組來源與維護資料。EasyPatcher、MagesLib 等共用工具仍維持在 Repository 根層級，不重複複製到各遊戲專案中。
 
-使用者可見文件以「**模組**」稱呼完整的中文化成果；既有 `Patches/` 目錄名稱，以及 patch data、`patch/berd/`、EasyPatcher 等技術名稱，則維持既有實作與路徑命名。
+本 Repository 對完整中文化成果使用「**模組**」一詞；既有 `Patches/` 目錄名稱，以及 patch data、`patch/berd/`、EasyPatcher 等技術名稱，則維持既有實作與路徑命名。
 
 ## 目錄結構
 
@@ -11,11 +11,11 @@
 各遊戲／語系目錄自行保存：
 
 - 中文化資料；
-- 維護腳本與驗證資料；
-- machine-readable authority；
-- 使用者與維護者文件；
+- 說明文件；
 - 著作權／第三方聲明與授權文件；
-- selected milestone evidence。
+- 維護腳本與驗證資料（工程／維護用途）；
+- machine-readable authority（主要供工具與自動化／維護流程使用）；
+- selected milestone evidence（專案紀錄／驗證用途）。
 
 ## 現有專案
 
