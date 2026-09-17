@@ -39,23 +39,23 @@
 | [`legal/THIRD_PARTY_NOTICES.md`](legal/THIRD_PARTY_NOTICES.md) | MagesTools、字型與其他第三方元件資訊。 |
 | [`legal/THIRD_PARTY_NOTICES.en.md`](legal/THIRD_PARTY_NOTICES.en.md) | 第三方聲明的英文參考版本。 |
 | [`docs/SOURCE_LAYOUT.md`](docs/SOURCE_LAYOUT.md) | 公開／私有來源與 Repository path 分工。 |
-| [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) | 維護資料與 repository-native maintenance 說明。 |
-| [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) | 重製與驗證資訊。 |
+| [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md) | 維護政策與 authority 變更規則（工程／維護用途）。 |
+| [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) | 重製與驗證資訊（工程／維護用途）。 |
 | [`CHANGELOG.md`](CHANGELOG.md) | 公開版本變更紀錄。 |
 | [`NOTICE.md`](NOTICE.md) | 穩定的 Notice 入口，導向 `legal/` 內完整聲明。 |
 
 ## 專案結構
 
 - `patch/berd/` — EasyPatcher 使用的公開中文化資料。
-- `docs/` — 人類可讀的翻譯方法、來源結構、維護、重製與致謝文件。
+- `docs/` — 翻譯方法、來源結構、維護、重製與致謝文件。
 - `legal/` — 原作權利、第三方 attribution 與授權文件。
-- `authority/` — release、private source、tooling 與 path 的 machine-readable exact bindings。
-- `maintenance/` — repository-native 維護實作與驗證參考。
-- `milestones/` — accepted milestone 的選定 immutable evidence。
+- `authority/` — release、private source、tooling 與 path 的 machine-readable exact bindings，主要供工具與維護流程使用。
+- `maintenance/` — repository-native 維護實作與驗證參考，主要供工程／維護作業使用。
+- `milestones/` — accepted milestone 的 immutable evidence，屬專案紀錄／驗證資料。
 
 完整官方日文／官方英文語料、alignment 與 recovered-source corpus 不隨公開 Repository 完整散布；其來源綁定請參閱 `authority/` 與 [`docs/SOURCE_LAYOUT.md`](docs/SOURCE_LAYOUT.md)。
 
-使用者文件以「**模組**」稱呼完整中文化成果；既有 `Patches/`、`patch/berd/`、EasyPatcher，以及已發布檔名中的 `Patch` 等技術路徑、工具名稱或既有 artifact identity 仍維持原名。
+本專案對完整中文化成果使用「**模組**」一詞；既有 `Patches/`、`patch/berd/`、EasyPatcher，以及已發布檔名中的 `Patch` 等技術路徑、工具名稱或既有 artifact identity 仍維持原名。
 
 ## 問題回報
 
