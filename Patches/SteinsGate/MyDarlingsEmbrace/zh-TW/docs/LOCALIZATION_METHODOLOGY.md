@@ -5,7 +5,7 @@
 
 本文件說明《STEINS;GATE 比翼雙飛的戀人》台灣繁體中文化模組在翻譯、術語統一、AI 輔助、審查與來源使用上的基本方法。
 
-它是人類可讀的公開說明，不取代專案內部的 machine-readable authority、Planner decisions 或 accepted artifact records。
+本文件不取代 `authority/` 內主要供工具與維護流程使用的 machine-readable bindings、Planner decisions 或 accepted artifact records。
 
 ## 翻譯權威順序
 
